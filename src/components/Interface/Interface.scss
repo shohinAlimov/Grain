@@ -1,0 +1,46 @@
+.interface {
+  position: relative;
+  padding: 0 0 75px;
+
+  &__gradient {
+    position: relative;
+    max-height: 350px;
+    height: 100vh;
+    z-index: -3;
+    border-radius: 12px;
+
+    &.green {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 185, 108, 0.6) 100%
+      );
+      margin: 0 0 15px 0;
+    }
+
+    &.gray {
+      background: linear-gradient(
+        180deg,
+        rgba(161, 161, 161, 0.1) 0%,
+        rgba(255, 255, 255, 0) 72%
+      );
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    z-index: -1;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    border: 1px solid #00b96c;
+  }
+}

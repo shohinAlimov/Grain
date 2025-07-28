@@ -1,0 +1,62 @@
+.hero {
+  min-height: calc(100vh - 100px); /* Занимает полную высоту экрана */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 68px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    &.accent {
+      max-width: fit-content;
+      background-color: rgb(0, 255, 149, 0.4);
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 40px 0;
+    font-size: 20px;
+    color: #545454;
+    text-align: center;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__try,
+  &__book {
+    padding: 12px 24px;
+    border-radius: 100px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  &__try {
+    background-color: #000000;
+    color: #ffffff;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__book {
+    background-color: #00b96c;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #01804b;
+    }
+  }
+}

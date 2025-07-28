@@ -1,0 +1,23 @@
+.companies {
+  padding: 75px 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 auto 20px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+  }
+}

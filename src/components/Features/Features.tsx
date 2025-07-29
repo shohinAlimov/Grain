@@ -1,13 +1,16 @@
 import "./Features.scss";
-import "./MeetingNotes.scss";
 
 import IconNotes from "../../assets/icons/IconNotes.svg?react";
 import IconAutomation from "../../assets/icons/IconAutomation.svg?react";
 import IconCollaboration from "../../assets/icons/IconCollaboration.svg?react";
 import IconAnalytics from "../../assets/icons/IconAnalytics.svg?react";
-import FeatureCard from "../../ui/FeatureCard/FeatureCard";
-import { AiMeetingNotes } from "../../data/AiMeetingNotes";
-import { assets } from "../../assets/assets";
+import {
+  AiMeetingNotes,
+  Analytics,
+  CoachingCollaboration,
+  MeetingAutomation,
+} from "../../data/Cards";
+import Slider from "../../ui/Slider/Slider";
 
 const Features = () => {
   return (
@@ -25,7 +28,7 @@ const Features = () => {
           </p>
           <ul className="features__list">
             <li className="features__item">
-              <div className="features__card">
+              <a className="features__card" href="#AiNotes">
                 <IconNotes
                   className="features__card-icon"
                   width={74}
@@ -39,10 +42,10 @@ const Features = () => {
                   Stay fully present during meetings, note-taking is now fully
                   automatic
                 </p>
-              </div>
+              </a>
             </li>
             <li className="features__item">
-              <div className="features__card">
+              <a className="features__card" href="#MeetingAutomation">
                 <IconAutomation
                   className="features__card-icon"
                   width={74}
@@ -57,10 +60,10 @@ const Features = () => {
                   Skip the data entry, notes auto-sync to CRM Contact & Deal
                   records
                 </p>
-              </div>
+              </a>
             </li>
             <li className="features__item">
-              <div className="features__card">
+              <a className="features__card" href="#Collaboration">
                 <IconCollaboration
                   className="features__card-icon"
                   width={74}
@@ -74,10 +77,10 @@ const Features = () => {
                   Train and onboard faster, playlists and comments make coaching
                   easy
                 </p>
-              </div>
+              </a>
             </li>
             <li className="features__item">
-              <div className="features__card">
+              <a className="features__card" href="#Analytics">
                 <IconAnalytics
                   className="features__card-icon"
                   width={74}
@@ -91,38 +94,44 @@ const Features = () => {
                   Close more deals, smart topics and key account alerts improve
                   visibility
                 </p>
-              </div>
+              </a>
             </li>
           </ul>
         </div>
 
-        <div className="meeting-notes">
-          <div className="meeting-notes__top">
-            <IconNotes width={40} height={40} aria-hidden={true} />
-            <span className="meeting-notes__top-text">AI Meeting Notes</span>
-          </div>
-          <h2 className="meeting-notes__title">
-            Stay fully present during meetings, <br /> note-taking is now
-            automatic
-          </h2>
+        <Slider
+          title="AI Meeting Notes"
+          description="Stay fully present during meetings, note-taking is now automatic"
+          icon={<IconNotes width={40} height={40} aria-hidden={true} />}
+          array={AiMeetingNotes}
+          id="AiNotes"
+        />
 
-          <div className="meeting-notes__slider">
-            <div className="meeting-notes__col">
-              {AiMeetingNotes.map((item) => (
-                <FeatureCard
-                  id={item.id}
-                  title={item.title}
-                  desc={item.desc}
-                  color={item.color}
-                />
-              ))}
-            </div>
-            <img className="meeting-notes__image" alt="" />
-            {/* 
-            <img src={assets.aiMeetingNotes1_2} alt="" />
-             */}
-          </div>
-        </div>
+        <Slider
+          title="Meeting Automation"
+          description="Skip the data entry, notes auto-sync to CRM Contact & Deal records"
+          icon={<IconAutomation width={40} height={40} aria-hidden={true} />}
+          array={MeetingAutomation}
+          id="MeetingAutomation"
+          reversed={true}
+        />
+
+        <Slider
+          title="Coaching & Collaboration"
+          description="Train and onboard reps faster, playlists and comments make coaching easy"
+          icon={<IconCollaboration width={40} height={40} aria-hidden={true} />}
+          array={CoachingCollaboration}
+          id="Collaboration"
+        />
+
+        <Slider
+          title="Deal Analytics & Insights"
+          description="Close more deals, smart topics and key account alerts improve visibility"
+          icon={<IconAnalytics width={40} height={40} aria-hidden={true} />}
+          array={Analytics}
+          id="Analytics"
+          reversed={true}
+        />
       </div>
     </section>
   );

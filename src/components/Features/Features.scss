@@ -48,7 +48,6 @@
     align-items: center;
     height: 100%;
     transition: transform 0.3s ease-in-out;
-    user-select: none;
     &:hover {
       transform: translateY(-5px);
     }

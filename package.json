@@ -14,7 +14,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.1",
-    "svgr": "^1.10.0",
+    "react-transition-group": "^4.4.5",
     "vite-plugin": "^0.0.0"
   },
   "devDependencies": {
@@ -27,6 +27,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
+    "prettier": "^3.6.2",
     "sass-embedded": "^1.89.2",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",

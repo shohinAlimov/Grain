@@ -1,0 +1,39 @@
+.meeting-notes {
+  padding: 75px 0;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px 0;
+
+    &-text {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 0 60px 0;
+  }
+
+  &__slider {
+    display: flex;
+    align-self: start;
+    gap: 70px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 342px;
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 576px;
+  }
+}

@@ -1,0 +1,47 @@
+.feature-card {
+  cursor: pointer;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &.purple {
+    --card-color: #9f4bf3;
+    --card-color-rgba: rgba(159, 75, 243, 0.42);
+  }
+
+  &.blue {
+    --card-color: #24c1dd;
+    --card-color-rgba: rgba(36, 193, 221, 0.3);
+  }
+
+  &.orange {
+    --card-color: #ff8616;
+    --card-color-rgba: rgba(255, 134, 22, 0.3);
+  }
+
+  &.green {
+    --card-color: #009959;
+    --card-color-rgba: rgba(0, 153, 89, 0.3);
+  }
+
+  &:hover {
+    border: 1px solid var(--card-color);
+    box-shadow: 0px 4px 32px 0px var(--card-color-rgba);
+  }
+
+  &__title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--card-color);
+    margin: 0 0 13px 0;
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 16px;
+    color: #545454;
+    line-height: 1.5;
+  }
+}

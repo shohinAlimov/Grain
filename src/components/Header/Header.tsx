@@ -8,26 +8,26 @@ const Header = () => {
     <header className="header" id="header">
       <div className="container">
         <div className="header__wrapper">
-          <Link className="header__logo-link" to={"#header"}>
+          <a className="header__logo-link" href="#header">
             <IconLogo
               className="header__logo-icon"
               width={126}
               height={34}
               aria-hidden={true}
             />
-          </Link>
+          </a>
 
           <nav className="nav">
             <ul className="nav__list">
               <li className="nav__item">
-                <NavLink className="nav__link" to="/">
+                <a className="nav__link" href="#header">
                   Home
-                </NavLink>
+                </a>
               </li>
               <li className="nav__item">
-                <NavLink className="nav__link" to="/">
+                <a className="nav__link" href="#features">
                   Features
-                </NavLink>
+                </a>
               </li>
               <li className="nav__item">
                 <NavLink className="nav__link" to="/">

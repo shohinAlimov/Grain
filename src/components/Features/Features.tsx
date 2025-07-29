@@ -1,13 +1,17 @@
 import "./Features.scss";
+import "./MeetingNotes.scss";
 
 import IconNotes from "../../assets/icons/IconNotes.svg?react";
 import IconAutomation from "../../assets/icons/IconAutomation.svg?react";
 import IconCollaboration from "../../assets/icons/IconCollaboration.svg?react";
 import IconAnalytics from "../../assets/icons/IconAnalytics.svg?react";
+import FeatureCard from "../../ui/FeatureCard/FeatureCard";
+import { AiMeetingNotes } from "../../data/AiMeetingNotes";
+import { assets } from "../../assets/assets";
 
 const Features = () => {
   return (
-    <section className="features">
+    <section className="features" id="features">
       <div className="container">
         <div className="features__wrapper">
           <span className="features__note">Features</span>
@@ -92,7 +96,33 @@ const Features = () => {
           </ul>
         </div>
 
-        <div className="features__notes"></div>
+        <div className="meeting-notes">
+          <div className="meeting-notes__top">
+            <IconNotes width={40} height={40} aria-hidden={true} />
+            <span className="meeting-notes__top-text">AI Meeting Notes</span>
+          </div>
+          <h2 className="meeting-notes__title">
+            Stay fully present during meetings, <br /> note-taking is now
+            automatic
+          </h2>
+
+          <div className="meeting-notes__slider">
+            <div className="meeting-notes__col">
+              {AiMeetingNotes.map((item) => (
+                <FeatureCard
+                  id={item.id}
+                  title={item.title}
+                  desc={item.desc}
+                  color={item.color}
+                />
+              ))}
+            </div>
+            <img className="meeting-notes__image" alt="" />
+            {/* 
+            <img src={assets.aiMeetingNotes1_2} alt="" />
+             */}
+          </div>
+        </div>
       </div>
     </section>
   );

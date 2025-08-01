@@ -1,0 +1,58 @@
+.privacy {
+  padding: 75px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 75px 0;
+  }
+
+  &__note {
+    border: 1px solid #f0f0f0;
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 18px;
+    display: block;
+    margin: 0 0 32px 0;
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 0 0 75px 0;
+    &.reversed {
+      flex-direction: row-reverse;
+    }
+
+    &-title {
+      max-width: 395px;
+      font-size: 50px;
+      font-weight: 600;
+      margin: 0 0 24px 0;
+    }
+
+    &-desc {
+      max-width: 630px;
+      font-size: 20px;
+      color: #545454;
+      margin: 0 0 80px 0;
+    }
+
+    &-link-more {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      & svg {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+}

@@ -8,6 +8,11 @@ import gradientBlue from "../assets/images/gradient-blue.png";
 import gradientOrange from "../assets/images/gradient-orange.png";
 import gradientGreen from "../assets/images/gradient-green.png";
 
+import IntegrationsImage from "../assets/images/integration-image.png";
+
+import PrivacySecurity from "../assets/images/privacySecurityImage.png";
+import PrivacySecurity2 from "../assets/images/privacySecurityImage2.png";
+
 export const assets = {
   image1,
   image2,
@@ -18,4 +23,8 @@ export const assets = {
   gradientBlue,
   gradientOrange,
   gradientGreen,
+
+  IntegrationsImage,
+  PrivacySecurity,
+  PrivacySecurity2,
 };

@@ -1,0 +1,68 @@
+.testimonials {
+  padding: 75px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__note {
+    border: 1px solid #f0f0f0;
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 18px;
+    display: block;
+    margin: 0 0 64px 0;
+  }
+
+  &__card {
+    border-radius: 24px;
+    padding: 50px 24px 24px;
+    box-shadow: 0px 1px 8px 0px rgba($color: #000000, $alpha: 0.4);
+
+    &-title {
+      max-width: 700px;
+      margin: 0 0 33px 0;
+      text-align: center;
+      font-size: 32px;
+
+      & span {
+        margin: 0 0 0 6px;
+        font-size: 40px;
+        background-color: rgba($color: #00ff95, $alpha: 0.4);
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 0 32px 0;
+
+    &-logo {
+      background-color: #00ff95;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-name {
+      font-weight: 600;
+      color: #949494;
+    }
+    &-job {
+      color: #949494;
+    }
+  }
+
+  &__verdict {
+    display: flex;
+    align-items: center;
+  }
+}

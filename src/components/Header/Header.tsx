@@ -30,17 +30,17 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav__item">
-                <NavLink className="nav__link" to="/">
+                <a className="nav__link" href="#integrations">
                   Integrations
-                </NavLink>
+                </a>
               </li>
               <li className="nav__item">
-                <NavLink className="nav__link" to="/">
+                <a className="nav__link" href="#testimonials">
                   Testimonials
-                </NavLink>
+                </a>
               </li>
               <li className="nav__item">
-                <NavLink className="nav__link" to="/">
+                <NavLink className="nav__link" to="PrivacySecurity">
                   Privacy & Security
                 </NavLink>
               </li>
